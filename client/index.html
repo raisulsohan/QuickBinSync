@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QuickBinSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <!-- Header -->
+    <div id="header">
+        <span class="title">QuickBinSync</span>
+        <span class="host-badge" id="hostBadge">—</span>
+    </div>
+
+    <!-- Project status -->
+    <div id="projectBar">
+        <div class="proj-name" id="projName">No project</div>
+        <div class="proj-status" id="projStatus">Save your project first</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div id="toolbar">
+        <button id="addBinBtn" class="primary">+ Add Watch Bin</button>
+        <button id="syncAllBtn">Sync All</button>
+    </div>
+
+    <!-- Auto-sync bar -->
+    <div id="autoSyncBar">
+        <label class="autosync-row" title="Periodically check linked folders for new media">
+            <span class="autosync-label">
+                <span class="autosync-dot" id="autoSyncDot"></span>
+                Auto-sync
+            </span>
+            <span class="autosync-info" id="autoSyncInfo">off</span>
+            <span class="switch">
+                <input type="checkbox" id="autoSyncToggle">
+                <span class="slider"></span>
+            </span>
+        </label>
+    </div>
+
+    <!-- Bin list -->
+    <div id="binList">
+        <div class="empty" id="emptyHint">No watch bins yet. Click "Add Watch Bin" to link a folder.</div>
+    </div>
+
+    <!-- Status bar -->
+    <div id="statusBar">
+        <span id="status">Ready</span>
+    </div>
+
+</div>
+
+<!-- Add/Edit bin modal -->
+<div id="modalOverlay" class="hidden">
+    <div id="modalBox">
+        <div class="modal-title" id="modalTitle">Add Watch Bin</div>
+
+        <label>Folder on disk</label>
+        <div class="row">
+            <input type="text" id="folderInput" placeholder="C:\path\to\folder" readonly>
+            <button id="browseBtn">Browse</button>
+        </div>
+
+        <label>Bin name in project</label>
+        <input type="text" id="binNameInput" placeholder="Footage">
+
+        <label>Bin path (use / for nested)</label>
+        <input type="text" id="binPathInput" placeholder="Footage  or  Assets/Footage">
+
+        <label class="check-row">
+            <input type="checkbox" id="recursiveInput" checked>
+            <span>Include subfolders (flat)</span>
+        </label>
+
+        <div class="modal-actions">
+            <button id="modalCancelBtn">Cancel</button>
+            <button id="modalSaveBtn" class="primary">Save</button>
+        </div>
+    </div>
+</div>
+
+<!-- Custom folder browser modal (panel-internal, no OS dialog) -->
+<div id="fbOverlay" class="hidden">
+    <div id="fbBox">
+        <div class="fb-title">Choose folder to watch</div>
+
+        <div class="fb-toolbar">
+            <button id="fbUpBtn" title="Go up one level">⬆ Up</button>
+            <button id="fbHomeBtn" title="Go to user home">🏠 Home</button>
+            <button id="fbRefreshBtn" title="Refresh">↻</button>
+        </div>
+
+        <div class="fb-pathbar" id="fbPathbar">—</div>
+
+        <div class="fb-content">
+            <div class="fb-sidebar" id="fbSidebar"></div>
+            <div class="fb-list" id="fbList"></div>
+        </div>
+
+        <div class="fb-footer">
+            <span class="fb-selected" id="fbSelected">No folder selected</span>
+            <button id="fbCancelBtn">Cancel</button>
+            <button id="fbSelectBtn" class="primary">Select</button>
+        </div>
+    </div>
+</div>
+
+<script src="../lib/CSInterface.js"></script>
+<script src="main.js"></script>
+
+<div class="credits" style="text-align: center; margin-top: 10px; font-size: 12px;">
+    <p>Made by <a href="https://raisulsohan.com" target="_blank" style="text-decoration: none;">raisulsohan</a></p>
+</div>
+
+</body>
+</html>
