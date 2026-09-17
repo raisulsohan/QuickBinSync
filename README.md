@@ -1,5 +1,23 @@
 # QuickBinSync
 
+> [!IMPORTANT]
+> **QuickBinSync has moved into [LazyKick](https://github.com/raisulsohan/LazyKick), as its Watch Bins tab.**
+> This repository is archived and no longer updated.
+>
+> LazyKick installs with one double-click (signed, no PlayerDebugMode). Its Watch Bins do what QuickBinSync did, and more:
+> - linking a folder whose files are already in the project never imports them twice;
+> - a bin can be edited (folder, name, filters) or reset in place;
+> - Auto-Sync waits until a file has finished copying;
+> - files that could not be imported are shown and retried.
+>
+> The same panel also pastes clipboard images onto the timeline and keeps project notes with timecodes.
+>
+> **QuickBinSync এখন [LazyKick](https://github.com/raisulsohan/LazyKick)-এর Watch Bins ট্যাব। এই রিপো আর আপডেট হবে না।**
+>
+> **[⬇️ Download LazyKick](https://github.com/raisulsohan/LazyKick/releases/latest)**
+
+---
+
 Pro IO-এর Watch Bin functionality-র একটা ফ্রি, ওপেন-সোর্স CEP extension। After Effects এবং Premiere Pro দুটোতেই কাজ করে। সিস্টেমের যেকোনো ফোল্ডারকে প্রজেক্টের bin-এর সাথে link করে রাখো — এক ক্লিকে নতুন media files import হয়ে যাবে, duplicate skip হবে।
 
 **ভার্সন:** 1.0.0
